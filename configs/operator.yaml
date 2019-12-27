@@ -1,0 +1,26 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+spec:
+  replicas: 1
+  serviceAccountName: prometheus-server
+  serviceMonitorSelector:
+    matchLabels:
+      app: prom
+  resources:
+    requests:
+      memory: 400Mi
+  enableAdminAPI: false
+  ruleSelector:
+    matchLabels:
+      role: alert-rules
+      app: prom
+  alerting:
+    alertmanagers:
+    - namespace: kevin
+      name: alertmanager
+      port: alertmanager
+  additionalScrapeConfigs:
+    name: additional-scrape-configs
+    key: prometheus-additional.yaml
