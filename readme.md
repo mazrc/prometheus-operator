@@ -1,16 +1,18 @@
-# Prometheus Operator
+# Prometheus Operator on an existing Kubernetes Cluster
 
-## Install Prometheus on a Kubernetes cluster
-Run install.sh <namespace>
+## Install Prometheus Operator
+
+Clone the repo and install Prometheus Operator using shell script.
 
 ```
-./install.sh prom
+git clone https://github.com/mazrc/prometheus-operator.git
+cd prometheus-operator
+./install.sh <namespace>
 ```
+
 ## Cleanup
 
-Run uninstall.sh <namespace>
-
 ```
-./uninstall.sh prom
+./uninstall.sh <namespace>
 ```
 
