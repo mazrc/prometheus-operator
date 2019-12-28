@@ -10,6 +10,12 @@ cd prometheus-operator
 ./install.sh <namespace>
 ```
 
+## Prometheus UI
+```
+kubectl port-forward svc/prometheus-service -n <namespace> 9090:8080
+```
+View UI at: http://localhost:9090/
+
 ## Cleanup
 
 ```
