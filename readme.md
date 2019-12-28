@@ -1,6 +1,6 @@
-# Prometheus Operator on an existing Kubernetes Cluster
+# Kubernetes Prometheus Operator
 
-## Install Prometheus Operator
+## Install Prometheus Operator on an existing K8 cluster
 
 Clone the repo and install Prometheus Operator using shell script.
 
